@@ -3,7 +3,7 @@ function Hello({ person }) {
     <div>
       <h1>
         {person.message} {person.emoji} {person.name} {person.seatNumbers}
-        {" test "}
+        {" test 2 "}
       </h1>
     </div>
   );
