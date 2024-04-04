@@ -12,7 +12,7 @@ const person = {
   bday: "06/21/1995",
   age: "28",
   address: "943 Estrada St. Malate Manila",
-  contactno: "test",
+  contactno: "09365579373",
   email: "warrenmrflr@gmail.com",
   skills: ["SQL", "TSQL", "HTML", "Javascript", "PHP"],
   description:
