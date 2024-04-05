@@ -14,7 +14,7 @@ export default function Skills({ skills }) {
           <i class="fab fa-js-square"></i>
         </li>
         <li class="list-inline-item">
-          <i class="fab fa-angular"></i>
+          <i class="fab fa-github"></i>
         </li>
         <li class="list-inline-item">
           <i class="fab fa-react"></i>
@@ -23,10 +23,13 @@ export default function Skills({ skills }) {
           <i class="fab fa-node-js"></i>
         </li>
         <li class="list-inline-item">
+          <i class="fab fa-java"></i>
+        </li>
+        <li class="list-inline-item">
           <i class="fab fa-php"></i>
         </li>
         <li class="list-inline-item">
-          <i class="fab fa-git"></i>
+          <i class="fab fa-python"></i>
         </li>
         <li class="list-inline-item">
           <i class="fab fa-npm"></i>
