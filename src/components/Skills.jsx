@@ -61,12 +61,6 @@ export default function Skills({ skills }) {
           </span>
           Agile Development & Scrum
         </li>
-        <li>
-          <span class="fa-li">
-            <i class="fas fa-check"></i>
-          </span>
-          Test
-        </li>
       </ul>
     </div>
   );
