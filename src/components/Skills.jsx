@@ -23,19 +23,10 @@ export default function Skills({ skills }) {
           <i class="fab fa-node-js"></i>
         </li>
         <li class="list-inline-item">
-          <i class="fab fa-sass"></i>
+          <i class="fab fa-php"></i>
         </li>
         <li class="list-inline-item">
-          <i class="fab fa-less"></i>
-        </li>
-        <li class="list-inline-item">
-          <i class="fab fa-wordpress"></i>
-        </li>
-        <li class="list-inline-item">
-          <i class="fab fa-gulp"></i>
-        </li>
-        <li class="list-inline-item">
-          <i class="fab fa-grunt"></i>
+          <i class="fab fa-git"></i>
         </li>
         <li class="list-inline-item">
           <i class="fab fa-npm"></i>
@@ -47,13 +38,13 @@ export default function Skills({ skills }) {
           <span class="fa-li">
             <i class="fas fa-check"></i>
           </span>
-          Mobile-First, Responsive Design
+          Web & Mobile, Responsive Design
         </li>
         <li>
           <span class="fa-li">
             <i class="fas fa-check"></i>
           </span>
-          Cross Browser Testing & Debugging
+          Cross Testing & Debugging
         </li>
         <li>
           <span class="fa-li">
