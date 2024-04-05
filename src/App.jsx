@@ -7,11 +7,12 @@ import Experience from "./components/Experience";
 import Education from "./components/Education";
 
 const person = {
-  name: "Warren Miraflor",
+  first_name: "Warren",
+  last_name: "Miraflor",
   jobclass: "Software Developer",
   bday: "06/21/1995",
   age: "28",
-  address: "943 Estrada St. Malate Manila",
+  address: "943 Estrada Street · Malate, Manila 1004 · +63936 557 9373 ·",
   contactno: "09365579373",
   email: "warrenmrflr@gmail.com",
   skills: ["SQL", "TSQL", "HTML", "Javascript", "PHP"],
@@ -23,7 +24,7 @@ const person = {
 const experience = [
   {
     job_position: "Software Developer",
-    job_period: "06/2022 - Current",
+    job_period: "March 2021 - Present",
     job_company: "Hartmann Crew Philippines, Hartmann Global IT",
     job_desc_1:
       "Transform legacy application 'Crew Management System' into a cloud application called 'Crew Management System Cloud', using 'Thinkwise' low code software.",
@@ -36,7 +37,7 @@ const experience = [
   },
   {
     job_position: "Software Developer",
-    job_period: "01/2020 - 06/2022",
+    job_period: "August 2020 - March 2021",
     job_company: "Hartmann Crew Philippines",
     job_desc_1:
       "Maintain and enhance 'Training Information System', A system that handles a crew training registration up to certification. This is written with C# and SQL.",
@@ -48,11 +49,14 @@ const experience = [
   },
   {
     job_position: "Software Developer (Intern)",
-    job_period: "04/2018 - 06/2018",
+    job_period: "April 2018 - June 2018",
     job_company: "Far Eastern University - NRMF",
     job_desc_1:
       "Basic  network configuration and maintain existing applications.",
     job_desc_2: "Web Development using PHP & MySQL.",
+    job_desc_3:
+      "Engage with office users to gather feedback and address their requests.",
+    job_desc_4: "Provide support and assistance for programs and events.",
   },
 ];
 
@@ -70,46 +74,38 @@ function App() {
   return (
     <div className="App">
       {/* Page Container */}
-      <div
-        className="w3-container w3-content"
-        style={{ maxWidth: "1400px", marginTop: "20px" }}
-      >
+      <div class="container-fluid p-0">
         {/* The Grid */}
-        <div className="w3-row">
-          {/* Left Column */}
-          <div className="w3-col m3">
-            <Profile
-              name={person.name}
-              picture_file_loc={person.picture_file_loc}
-              jobclass={person.jobclass}
-              bday={person.bday}
-              age={person.age}
-              address={person.address}
-            />
-            <br />
-            <Skills skills={person.skills} />
-            <br />
-            <Contact contactno={person.contactno} email={person.email} />
-            <br />
-          </div>
-          {/* Middle Column */}
-          <div className="w3-col m9">
-            <Description description={person.description} />
-            <Experience experience={experience} />
-            <Education education={education} />
-          </div>
-        </div>
+        <section class="resume-section" id="about">
+          {/* About */}
+          <Profile
+            first_name={person.first_name}
+            last_name={person.last_name}
+            email={person.email}
+            description={person.description}
+            picture_file_loc={person.picture_file_loc}
+            jobclass={person.jobclass}
+            bday={person.bday}
+            age={person.age}
+            address={person.address}
+          />
+        </section>
+        <hr class="m-0" />
+        {/* Experience */}
+        <section class="resume-section" id="experience">
+          <Experience experience={experience} />
+        </section>
+        <hr class="m-0" />
+        {/*Education*/}
+        <section class="resume-section" id="education">
+          <Education education={education} />
+        </section>
+        <hr class="m-0" />
+        {/* Skills*/}
+        <section class="resume-section" id="skills">
+          <Skills skills={person.skills} />
+        </section>
       </div>
-
-      <footer className="w3-container w3-theme-d5">
-        <p>
-          I created this page with{" "}
-          <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">
-            w3.css
-          </a>{" "}
-          and Vite + React
-        </p>
-      </footer>
     </div>
   );
 }

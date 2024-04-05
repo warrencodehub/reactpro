@@ -1,12 +1,15 @@
 import Pictures from "./Picture";
 
 export default function Profile({
-  name,
+  first_name,
+  last_name,
   picture_file_loc,
   jobclass,
   bday,
   age,
   address,
+  email,
+  description,
 }) {
   // my birth date as a date
   let bdate = new Date(bday);
@@ -24,20 +27,29 @@ export default function Profile({
     cage = cage - 1;
   }
   return (
-    <div className="w3-card w3-round w3-white">
-      <div className="w3-container">
-        <h4 className="w3-center">
-          <b>{name}</b>
-        </h4>
-        <p className="w3-center">
-          <Pictures picture_file_loc={picture_file_loc} />
-        </p>
-        <hr />
-        <p>{jobclass}</p>
-        <p className="w3-small">
-          {bday}, {cage} yrs
-        </p>
-        <p className="w3-small">{address}</p>
+    <div class="resume-section-content">
+      <h1 class="mb-0">
+        {first_name}
+        <span class="text-primary">{last_name}</span>
+      </h1>
+      <div class="subheading mb-5">
+        {address}
+        <a href="mailto:name@email.com">{email}</a>
+      </div>
+      <p class="lead mb-5">{description}</p>
+      <div class="social-icons">
+        <a class="social-icon" href="#!">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a class="social-icon" href="#!">
+          <i class="fab fa-github"></i>
+        </a>
+        <a class="social-icon" href="#!">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a class="social-icon" href="#!">
+          <i class="fab fa-facebook-f"></i>
+        </a>
       </div>
     </div>
   );
