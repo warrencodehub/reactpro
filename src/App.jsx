@@ -31,7 +31,7 @@ const experience = [
     job_desc_2:
       "Develop and maintain 'HIS mobile app' or 'Hartmann Information System mobile app', using 'Thinkwise' low code software.",
     job_desc_3:
-      "Develop and maintain 'Master Database' software that is akin to a 'Shareholder management tool' , using 'Thinkwise' low code software.",
+      "Develop and maintain 'Master Database' software that is a kin to a 'Shareholder management tool' , using 'Thinkwise' low code software.",
     job_desc_4:
       "Provide training on low code platform utilization and proficiency in SQL and T-SQL, while concurrently managing and guiding team members.",
   },
@@ -40,12 +40,13 @@ const experience = [
     job_period: "August 2020 - March 2021",
     job_company: "Hartmann Crew Philippines",
     job_desc_1:
-      "Maintain and enhance 'Training Information System', A system that handles a crew training registration up to certification. This is written with C# and SQL.",
+      "Maintain and enhance 'HCP Mobile Application System', An application that handles a crew information and geofencing technology. This is written with Android Studio/Java and Firebase database.",
     job_desc_2:
       "Engage with office users to gather feedback and address their requests.",
     job_desc_3:
       "Create documentations for current decade old applications candidate for future transformation, for future developers",
-    job_desc_4: "Create proof of concepts for the company for future use.",
+    job_desc_4:
+      "Familiarize C# applications and provide training concepts for the company for future development.",
   },
   {
     job_position: "Software Developer (Intern)",
