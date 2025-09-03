@@ -12,10 +12,10 @@ const person = {
   jobclass: "Software Developer",
   bday: "06/21/1995",
   age: "28",
-  address: "943 Estrada Street · Malate, Manila 1004 · +63936 557 9373 ·",
+  address: "Blk 22 Lot 19 Villa Ana Maria · Rodriguez, Rizal 1860 · +63936 557 9373 ·",
   contactno: "09365579373",
   email: "warrenmrflr@gmail.com",
-  skills: ["SQL", "TSQL", "HTML", "Javascript", "PHP"],
+  skills: ["SQL", "C#", "HTML", "Javascript", "CSS", "ASP.NET", "React", "REST API"],
   description:
     '"I am a Software Developer with holistic knowledge of software development and proven knowledge in creating and designing software in a test-driven environment and agile software methodology."',
   picture_file_loc: "./images/warren_art.jpeg",
@@ -24,7 +24,16 @@ const person = {
 const experience = [
   {
     job_position: "Software Developer",
-    job_period: "March 2021 - Present",
+    job_period: "September 2024 - Present",
+    job_company: "Eurolink Network International Corporation",
+    job_desc_1:  "Maintain and enhance 'EClaims Philhealth Integration System', An application that handles a claims information and system provider for health facilities. This is written with C#/ASP.NET MVC and Microsoft SQL database.",
+    job_desc_2: "Implemented Azure DevOps (Boards, Pipelines, Repos) to streamline Agile workflows and accelerate SDLC from code to production.",
+    job_desc_3: "Implemented REST API integration to enable seamless communication between frontend and backend services.",
+    job_desc_4: "Handled end-to-end deployment from testing to production environments, ensuring stability, functionality, and readiness for live use",
+  },
+  {
+    job_position: "Software Developer",
+    job_period: "March 2021 - August 2024",
     job_company: "Hartmann Crew Philippines, Hartmann Global IT",
     job_desc_1:
       "Transform legacy application 'Crew Management System' into a cloud application called 'Crew Management System Cloud', using 'Thinkwise' low code software.",
@@ -47,17 +56,6 @@ const experience = [
       "Create documentations for current decade old applications candidate for future transformation, for future developers",
     job_desc_4:
       "Familiarize C# applications and provide training concepts for the company for future development.",
-  },
-  {
-    job_position: "Software Developer (Intern)",
-    job_period: "April 2018 - June 2018",
-    job_company: "Far Eastern University - NRMF",
-    job_desc_1:
-      "Basic  network configuration and maintain existing applications.",
-    job_desc_2: "Web Development using PHP & MySQL.",
-    job_desc_3:
-      "Engage with office users to gather feedback and address their requests.",
-    job_desc_4: "Provide support and assistance for programs and events.",
   },
 ];
 
