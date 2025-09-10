@@ -67,6 +67,13 @@ const education = [
   },
 ];
 
+const contact = [
+  {
+    contactno: "09365579373",
+    email: "warrenmrflr@gmail.com",
+  },
+];
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -103,6 +110,11 @@ function App() {
         {/* Skills*/}
         <section class="resume-section" id="skills">
           <Skills skills={person.skills} />
+        </section>
+        <hr class="m-0" />
+        {/*Contact*/}
+        <section class="resume-section" id="contact">
+          <Contact contact={contact} />
         </section>
       </div>
     </div>
