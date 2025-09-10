@@ -23,7 +23,7 @@ export default function Skills({ skills }) {
           <i class="fab fa-node-js"></i>
         </li>
         <li class="list-inline-item">
-          <i class="fab fa-java"></i>
+          <i class="fab fa-laravel"></i>
         </li>
         <li class="list-inline-item">
           <i class="fab fa-php"></i>

@@ -5,6 +5,8 @@ import Contact from "./components/Contact";
 import Description from "./components/Description";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
+import { ThemeProvider } from "./context/ThemeContext";
+import ThemeToggle from "./components/ThemeToggle";
 
 const person = {
   first_name: "Warren",
@@ -12,7 +14,7 @@ const person = {
   jobclass: "Software Developer",
   bday: "06/21/1995",
   age: "28",
-  address: "Blk 22 Lot 19 Villa Ana Maria · Rodriguez, Rizal 1860 · +63936 557 9373 ·",
+  address: "Rodriguez, Rizal PH 1860 · +63936 557 9373 ·",
   contactno: "09365579373",
   email: "warrenmrflr@gmail.com",
   skills: ["SQL", "C#", "HTML", "Javascript", "CSS", "ASP.NET", "React", "REST API"],
@@ -78,8 +80,10 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="App">
-      {/* Page Container */}
+    <ThemeProvider>
+      <div className="App">
+        <ThemeToggle />
+        {/* Page Container */}
       <div class="container-fluid p-0">
         {/* The Grid */}
         <section class="resume-section" id="about">
@@ -117,7 +121,8 @@ function App() {
           <Contact contact={contact} />
         </section>
       </div>
-    </div>
+      </div>
+    </ThemeProvider>
   );
 }
 
