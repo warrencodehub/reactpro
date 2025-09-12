@@ -56,7 +56,9 @@ export default function Contact({ contact }) {
               style={{
                 backgroundColor: 'var(--surface-color)',
                 color: 'var(--text-color)',
-                border: '1px solid var(--text-secondary-color)'
+                border: '2px solid var(--text-secondary-color)',
+                borderRadius: '4px',
+                padding: '8px'
               }}
             />
           </div>
@@ -73,7 +75,9 @@ export default function Contact({ contact }) {
               style={{
                 backgroundColor: 'var(--surface-color)',
                 color: 'var(--text-color)',
-                border: '1px solid var(--text-secondary-color)'
+                border: '2px solid var(--text-secondary-color)',
+                borderRadius: '4px',
+                padding: '8px'
               }}
             />
           </div>
@@ -90,7 +94,9 @@ export default function Contact({ contact }) {
               style={{
                 backgroundColor: 'var(--surface-color)',
                 color: 'var(--text-color)',
-                border: '1px solid var(--text-secondary-color)'
+                border: '2px solid var(--text-secondary-color)',
+                borderRadius: '4px',
+                padding: '8px'
               }}
             ></textarea>
           </div>

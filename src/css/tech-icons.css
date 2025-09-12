@@ -1,0 +1,136 @@
+.dev-icons {
+  font-size: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  position: relative;
+}
+
+.dev-icons .list-inline-item {
+  transition: transform 0.3s ease-in-out;
+  animation: float 3s ease-in-out infinite;
+}
+
+.dev-icons .list-inline-item:nth-child(1) { animation-delay: 0s; }
+.dev-icons .list-inline-item:nth-child(2) { animation-delay: 0.2s; }
+.dev-icons .list-inline-item:nth-child(3) { animation-delay: 0.4s; }
+.dev-icons .list-inline-item:nth-child(4) { animation-delay: 0.6s; }
+.dev-icons .list-inline-item:nth-child(5) { animation-delay: 0.8s; }
+.dev-icons .list-inline-item:nth-child(6) { animation-delay: 1s; }
+.dev-icons .list-inline-item:nth-child(7) { animation-delay: 1.2s; }
+.dev-icons .list-inline-item:nth-child(8) { animation-delay: 1.4s; }
+.dev-icons .list-inline-item:nth-child(9) { animation-delay: 1.6s; }
+.dev-icons .list-inline-item:nth-child(10) { animation-delay: 1.8s; }
+
+.dev-icons .list-inline-item i {
+  display: block;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease-in-out;
+}
+
+.dev-icons .list-inline-item i:hover {
+  transform: scale(1.2) rotateY(180deg);
+  transition: transform 0.6s ease-in-out;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+.dev-icons .list-inline-item:hover {
+  transform: scale(1.2);
+}
+
+/* Original brand colors for each tech icon */
+.fa-html5 {
+  color: #E34F26;
+}
+
+.fa-css3-alt {
+  color: #1572B6;
+}
+
+.fa-js-square {
+  color: #F7DF1E;
+}
+
+.fa-react {
+  color: #61DAFB;
+}
+
+.fa-node-js {
+  color: #339933;
+}
+
+.fa-github {
+  color: #181717;
+}
+
+.fa-laravel {
+  color: #FF2D20;
+}
+
+.fa-php {
+  color: #777BB4;
+}
+
+.fa-python {
+  color: #3776AB;
+}
+
+.fa-npm {
+  color: #CB3837;
+}
+}
+}
+
+/* Original brand colors for each tech icon */
+.fa-html5 {
+  color: #E34F26;
+}
+
+.fa-css3-alt {
+  color: #1572B6;
+}
+
+.fa-js-square {
+  color: #F7DF1E;
+}
+
+.fa-react {
+  color: #61DAFB;
+}
+
+.fa-node-js {
+  color: #339933;
+}
+
+.fa-github {
+  color: #181717;
+}
+
+.fa-laravel {
+  color: #FF2D20;
+}
+
+.fa-php {
+  color: #777BB4;
+}
+
+.fa-python {
+  color: #3776AB;
+}
+
+.fa-npm {
+  color: #CB3837;
+}

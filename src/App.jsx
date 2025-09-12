@@ -7,6 +7,8 @@ import Experience from "./components/Experience";
 import Education from "./components/Education";
 import { ThemeProvider } from "./context/ThemeContext";
 import ThemeToggle from "./components/ThemeToggle";
+import { motion, useInView } from "framer-motion";
+import { useRef, useEffect } from "react";
 
 const person = {
   first_name: "Warren",
@@ -77,7 +79,39 @@ const contact = [
 ];
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [activeSection, setActiveSection] = useState("");
+  
+  const aboutRef = useRef(null);
+  const experienceRef = useRef(null);
+  const educationRef = useRef(null);
+  const skillsRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const aboutInView = useInView(aboutRef, { threshold: 0.3 });
+  const experienceInView = useInView(experienceRef, { threshold: 0.3 });
+  const educationInView = useInView(educationRef, { threshold: 0.3 });
+  const skillsInView = useInView(skillsRef, { threshold: 0.3 });
+  const contactInView = useInView(contactRef, { threshold: 0.3 });
+
+  useEffect(() => {
+    if (aboutInView) setActiveSection("about");
+    if (experienceInView) setActiveSection("experience");
+    if (educationInView) setActiveSection("education");
+    if (skillsInView) setActiveSection("skills");
+    if (contactInView) setActiveSection("contact");
+  }, [aboutInView, experienceInView, educationInView, skillsInView, contactInView]);
+
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { 
+        duration: 1.0,
+        ease: "easeOut"
+      }
+    }
+  };
 
   return (
     <ThemeProvider>
@@ -86,7 +120,14 @@ function App() {
         {/* Page Container */}
       <div class="container-fluid p-0">
         {/* The Grid */}
-        <section class="resume-section" id="about">
+        <motion.section 
+          ref={aboutRef}
+          className="resume-section" 
+          id="about"
+          variants={sectionVariants}
+          initial="hidden"
+          animate={aboutInView || activeSection === "about" ? "visible" : "hidden"}
+        >
           {/* About */}
           <Profile
             first_name={person.first_name}
@@ -99,27 +140,55 @@ function App() {
             age={person.age}
             address={person.address}
           />
-        </section>
-        <hr class="m-0" />
+        </motion.section>
+        <hr className="m-0" />
         {/* Experience */}
-        <section class="resume-section" id="experience">
+        <motion.section 
+          ref={experienceRef}
+          className="resume-section" 
+          id="experience"
+          variants={sectionVariants}
+          initial="hidden"
+          animate={experienceInView || activeSection === "experience" ? "visible" : "hidden"}
+        >
           <Experience experience={experience} />
-        </section>
-        <hr class="m-0" />
+        </motion.section>
+        <hr className="m-0" />
         {/*Education*/}
-        <section class="resume-section" id="education">
+        <motion.section 
+          ref={educationRef}
+          className="resume-section" 
+          id="education"
+          variants={sectionVariants}
+          initial="hidden"
+          animate={educationInView || activeSection === "education" ? "visible" : "hidden"}
+        >
           <Education education={education} />
-        </section>
-        <hr class="m-0" />
+        </motion.section>
+        <hr className="m-0" />
         {/* Skills*/}
-        <section class="resume-section" id="skills">
+        <motion.section 
+          ref={skillsRef}
+          className="resume-section" 
+          id="skills"
+          variants={sectionVariants}
+          initial="hidden"
+          animate={skillsInView || activeSection === "skills" ? "visible" : "hidden"}
+        >
           <Skills skills={person.skills} />
-        </section>
-        <hr class="m-0" />
+        </motion.section>
+        <hr className="m-0" />
         {/*Contact*/}
-        <section class="resume-section" id="contact">
+        <motion.section 
+          ref={contactRef}
+          className="resume-section" 
+          id="contact"
+          variants={sectionVariants}
+          initial="hidden"
+          animate={contactInView || activeSection === "contact" ? "visible" : "hidden"}
+        >
           <Contact contact={contact} />
-        </section>
+        </motion.section>
       </div>
       </div>
     </ThemeProvider>
