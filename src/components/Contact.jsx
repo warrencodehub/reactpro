@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 export default function Contact({ contact }) {
+  const form = useRef();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,19 +23,26 @@ export default function Contact({ contact }) {
     setStatus('sending');
 
     try {
-      // Using mailto link as a fallback solution
-      const mailtoLink = `mailto:${contact[0].email}?subject=Contact from ${formData.name}&body=${encodeURIComponent(
-        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-      )}`;
-      window.location.href = mailtoLink;
-      
-      setStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        message: ''
-      });
+      // Replace these with your EmailJS service details
+      const result = await emailjs.sendForm(
+        'service_d1wkvb4', // Replace with your EmailJS service ID
+        'template_kveq0v7', // Replace with your EmailJS template ID
+        form.current,
+        'C70KqRzpKfnAjEmcV' // Replace with your EmailJS public key
+      );
+
+      if (result.text === 'OK') {
+        setStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          message: ''
+        });
+      } else {
+        setStatus('error');
+      }
     } catch (error) {
+      console.error('Email error:', error);
       setStatus('error');
     }
   };

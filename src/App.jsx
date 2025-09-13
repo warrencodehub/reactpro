@@ -178,17 +178,6 @@ function App() {
           <Skills skills={person.skills} />
         </motion.section>
         <hr className="m-0" />
-        {/*Contact*/}
-        <motion.section 
-          ref={contactRef}
-          className="resume-section" 
-          id="contact"
-          variants={sectionVariants}
-          initial="hidden"
-          animate={contactInView || activeSection === "contact" ? "visible" : "hidden"}
-        >
-          <Contact contact={contact} />
-        </motion.section>
       </div>
       </div>
     </ThemeProvider>
