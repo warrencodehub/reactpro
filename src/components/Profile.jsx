@@ -52,7 +52,7 @@ export default function Profile({
         >
           <i class="fab fa-github"></i>
         </a>
-        <a class="social-icon" href="/src/assets/Warren_Miraflor_Resume.pdf" download>
+        <a class="social-icon" href="/src/assets/WarrenMiraflor.pdf" download>
           <i class="fas fa-file-pdf"></i>
         </a>
       </div>
